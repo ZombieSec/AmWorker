@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://amzn.to/422Av6k"
+      }
+    },
+    "condition": {
+      "urlFilter": "||amazon.it^",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Redirector",
+  "version": "1.0",
+  "description": "Redirects the first visit to amazon.it to a referral link",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://amazon.it/*",
+    "*://www.amazon.it/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Amazon Redirector"
+  },
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "amazon_redirect_rules",
+      "enabled": false,
+      "path": "rules.json"
+    }]
+  }
+}
